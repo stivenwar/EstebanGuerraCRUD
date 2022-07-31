@@ -1,0 +1,33 @@
+.navbar{
+    background: #008F39 ;
+    display: flex;
+    justify-content: center;
+    a{
+      display: inline-block;
+      padding: 30px 30px;
+      text-decoration: none;
+      color:#FFF;
+      &:hover {
+        background: #00B347;
+      }
+    }
+  }
+
+.active-link{
+  background: #00B347
+}
+.navbar-open{
+  display: none;
+}
+$small: 500px;
+$medium: 900px;
+
+  @media screen and (max-width: $small) {
+    .navbar{
+      display: none;
+    }
+    .navbar-open{
+      display: block;
+    }
+  }
+

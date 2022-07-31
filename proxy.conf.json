@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "https://tienda.mercadona.es",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
