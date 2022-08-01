@@ -1,13 +1,21 @@
+<div class="categorias">
+  <ul>
+    <li *ngFor="let c of categorias">
+      <a [routerLink]="['/listar',c.name]" (click)="verProductos(c)"  >{{c.name}}</a>
+    </li>
+  </ul>
+</div>
+<div class="grid">
+  <div class="containerCard" *ngFor="let p of productos">
+    <div class="card" >
+      <img  src="{{p.thumbnail}}">
+      <div class="content">
+        <p>{{p.display_name}}</p>
+      </div>
+      <a href="{{p.share_url}}">Más información</a>
+    </div>
 
-<div *ngFor="let p of productos">
-  <div class="tarjeta" >
-    <div class="titulo">{{p.products.name}}</div>
-    <div class="cuerpo">
-      <img src="" alt="muestra">
-      lorem ipsum
-    </div>
-    <div class="pie">
-      <a href="#">Más información</a>
-    </div>
   </div>
+
+
 </div>

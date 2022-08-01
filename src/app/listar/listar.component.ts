@@ -12,23 +12,27 @@ import {LogicalFileSystem} from "@angular/compiler-cli";
 export class ListarComponent implements OnInit {
 
   productos : any[] = [];
+  categorias: any[] = [];
   constructor(private service: ServiceService) {
-
   }
-
   ngOnInit(): void {
   this.getProducts();
   }
 
   getProducts(){
     this.service.getInfo().subscribe(data=> {
-        for (let productos of data["categories"]){
-          console.log(productos);
+          for (let cat of data["categories"]){
+            this.categorias.push(cat)
+          }
+      console.log(this.categorias)
 
-        }
-
-      console.log(this.productos);
     });
   }
-
+  verProductos(productos: any) {
+    console.log(productos);
+    this.productos= [];
+    for (let prod of productos["products"]){
+      this.productos.push(prod);
+    }
+  }
 }

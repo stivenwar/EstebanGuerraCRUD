@@ -8,6 +8,7 @@ import {ActualizarComponent} from "./actualizar/actualizar.component";
 const routes: Routes = [
   {path: 'inicio', component: HomeComponent},
   {path: 'listar',component: ListarComponent},
+  {path: 'listar/:categoria',component: ListarComponent},
   {path: 'crear', component: CrearComponent},
   {path: 'actualizar',component: ActualizarComponent}
 ];

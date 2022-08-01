@@ -1,36 +1,107 @@
-.tarjeta{
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  width:420px;
-  border: 1px solid lightgray;
-  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
-  border-radius:15px;
-  font-family: sans-serif;
+*{
+  font-family: "Arial";
 }
-.titulo{
-  font-size: 24px;
-  padding: 10px 10px 0 10px;;
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
 }
-.cuerpo{
-  padding: 10px;
+.categorias{
+  background-color: orange;
 }
-.pie{
-  background: #6699ff;
-  border-radius:0 0 15px 15px;
-  padding: 10px;
-  text-align:center;
+.categorias ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content:space-around;
+  background: orange;
+  list-style: none;
+  a{
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 10px;
+    text-decoration: none;
+    color:#FFF;
+    &:hover {
+      background: coral;
+    }
+
+  }
 }
-.pie a{
-  text-decoration: none;
-  color: white;
+.containerCard{
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1200px;
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .card{
+    width: 250px;
+    height: 350px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgb(0,0,0,0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.25s;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    &:hover{
+      transform: translateY(-15px);
+      box-shadow: 0 12px 16px rgb(0,0,0,0.2);
+    }
+    img{
+       width: 250px;
+      height: 200px;
+    }
+
+    .content{
+      font-weight: 600;
+
+    }
+    a{
+      font-weight: 500;
+      text-decoration: none;
+      color: white ;
+      border: 1px solid orange;
+      border-radius: 15px ;
+      padding: 10px;
+    }
+  }
+
 }
-.pie a:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  content: ""
+$medium: 1060px;
+$small: 800px;
+$smallx2: 550px;
+@media screen and (max-width: $medium){
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
 }
+@media screen and (max-width: $small){
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  .categorias ul{
+    display: flex;
+   flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: $smallx2){
+  .grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  //.tarjeta{
+  //  width: 300px;
+  //}
+}
+
+
