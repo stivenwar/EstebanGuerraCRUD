@@ -5,6 +5,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
+  background: #FFFFFF;
+  padding-top: 50px;
 }
 .categorias{
   background-color: orange;
@@ -29,7 +31,7 @@
   }
 }
 .containerCard{
-  margin-top: 50px;
+
   width: 100%;
   max-width: 1200px;
   height: 430px;
@@ -54,6 +56,7 @@
     img{
        width: 250px;
       height: 200px;
+      filter: opacity(0.9) drop-shadow(0 0 0 grey);
     }
 
     .content{
@@ -63,10 +66,11 @@
     a{
       font-weight: 500;
       text-decoration: none;
-      color: white ;
+      color: black ;
       border: 1px solid orange;
       border-radius: 15px ;
       padding: 10px;
+      margin: 20px 20px;
     }
   }
 
