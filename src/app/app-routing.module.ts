@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: 'crear', component: CrearComponent},
   {path: 'actualizar',component: ActualizarComponent},
   {path: '**', component: HomeComponent}
+
 ];
 
 @NgModule({
