@@ -1,0 +1,61 @@
+.init{
+  img{
+    position: relative;
+    margin:10px auto;
+    border-radius:60px;
+    border: 1px solid #999;
+    width:100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+  }
+  h1{
+    font-family: "Comic Sans MS";
+    font-size: 50px;
+    color: gainsboro;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+$medium: 1060px;
+$small: 800px;
+$smallx2: 550px;
+@media screen and (max-width: $medium){
+  h1{
+    font-size: 35px !important;
+    top: 100px !important;
+    left: 100px !important;
+  }
+}
+@media screen and (max-width: $small){
+
+  h1{
+    font-size: 35px !important;
+    top: 100px !important;
+    left: 100px !important;
+  }
+
+
+
+}
+@media screen and (max-width: $smallx2){
+  h1{
+    font-size: 35px !important;
+    top: 200px !important;
+    left: 80px !important;
+  }
+}

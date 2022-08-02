@@ -10,6 +10,9 @@ import { ListarComponent } from './listar/listar.component';
 import { CrearComponent } from './crear/crear.component';
 import { ActualizarComponent } from './actualizar/actualizar.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { ProductsComponent } from './listar/products/products.component';
+import { UppercasePipe } from './pipes/uppercase.pipe';
+import { ModalImagenComponent } from './listar/modal-imagen/modal-imagen.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     HomeComponent,
     ListarComponent,
     CrearComponent,
-    ActualizarComponent
+    ActualizarComponent,
+    ProductsComponent,
+    UppercasePipe,
+    ModalImagenComponent
 
   ],
   imports: [

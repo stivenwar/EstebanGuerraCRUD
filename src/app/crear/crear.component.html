@@ -1,1 +1,37 @@
-<p>crear works!</p>
+<div class="contact_form">
+
+  <div class="formulario">
+    <h1>Formulario de Producto</h1>
+    <form (ngSubmit)="datosForm">
+      <p>
+        <label for="titulo" class="colocar_nombre">Titulo
+        </label>
+        <input type="text" name="introducir_titulo" id="titulo"  placeholder="Escribe el titulo del producto">
+      </p>
+      <p>
+        <label for="precio" class="colocar_email">Precio
+        </label>
+        <input type="number" name="introducir_precio" id="precio"  placeholder="Escribe el precio">
+      </p>
+      <p>
+        <label for="peso" class="colocar_nombre">Peso
+        </label>
+        <input type="text" name="introducir_titulo" id="peso"  placeholder="Escribe el peso">
+      </p>
+      <p>
+        <label for="formato" class="colocar_nombre">Formato
+        </label>
+        <input type="text" name="introducir_titulo" id="formato"  placeholder="Escribe el formato">
+      </p>
+      <p>
+        <label for="imagen" class="colocar_nombre">URL Imagen
+        </label>
+        <input type="text" name="introducir_imagen" id="imagen"  placeholder="URL Imagen">
+      </p>
+      <button type="submit" name="enviar_formulario" id="enviar"><p>GUARDAR</p></button>
+
+
+
+    </form>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {Categories} from "../interface/interface.categories";
 import {HttpClient} from "@angular/common/http";
@@ -12,11 +12,8 @@ export class ServiceService {
 
   constructor( private http: HttpClient) {
   }
-
+  $modal = new EventEmitter
   getInfo(): Observable<Categories>{
     return this.http.get<Categories>(`${this.API_URI}`);
-  }
-  getInfoId(){
-
   }
 }

@@ -1,21 +1,32 @@
 <div class="categorias">
   <ul>
     <li *ngFor="let c of categorias">
-      <a [routerLink]="['/listar',c.name]" (click)="verProductos(c)"  >{{c.name}}</a>
+      <a [routerLink]="['/listar',c.id]" >{{c.name|uppercase}}</a>
+    </li>
+    <li>
+
     </li>
   </ul>
 </div>
-<div class="grid">
-  <div class="containerCard" *ngFor="let p of productos">
-    <div class="card" >
-      <img  src="{{p.thumbnail}}">
-      <div class="content">
-        <p>{{p.display_name}}</p>
+<div class="title">
+  <h1>TODOS LOS PRODUCTOS</h1>
+</div>
+<div  class="containerGrid">
+  <div class="grid">
+    <div class="containerCard" *ngFor="let p of allProducts">
+      <div class="card" >
+        <img  src="{{p.thumbnail}}" (click)="bigImage(p.thumbnail)">
+        <div class="content">
+          <p>{{p.display_name}}</p>
+        </div>
+        <a href="{{p.share_url}}">Más información</a>
       </div>
-      <a href="{{p.share_url}}">Más información</a>
-    </div>
 
+    </div>
+  </div>
+  <div class="modalImage" *ngIf="isImageClick == true">
+    <app-modal-imagen  (messageEvent)="receiveMessage($event)" [imagenHijo]="imagenPadre"></app-modal-imagen>
   </div>
 
-
 </div>
+

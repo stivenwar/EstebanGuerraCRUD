@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./actualizar.component.scss']
 })
 export class ActualizarComponent implements OnInit {
+  datosFormActualizar: any;
 
   constructor() { }
 

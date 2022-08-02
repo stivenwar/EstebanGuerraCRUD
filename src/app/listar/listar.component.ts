@@ -11,28 +11,53 @@ import {LogicalFileSystem} from "@angular/compiler-cli";
 })
 export class ListarComponent implements OnInit {
 
-  productos : any[] = [];
-  categorias: any[] = [];
+  productos : any[];
+  categorias: any[];
+  allProducts: any[];
+  isImageClick: boolean;
+  imagenPadre: string;
+
   constructor(private service: ServiceService) {
+    this.categorias = [];
+    this.productos = [];
+    this.allProducts = [];
+    this.isImageClick = false;
+    this.imagenPadre = '';
   }
   ngOnInit(): void {
   this.getProducts();
   }
 
   getProducts(){
+    console.log(this.imagenPadre)
     this.service.getInfo().subscribe(data=> {
           for (let cat of data["categories"]){
             this.categorias.push(cat)
           }
-      console.log(this.categorias)
-
+          this.insertAllProducts(this.categorias);
     });
   }
-  verProductos(productos: any) {
-    console.log(productos);
-    this.productos= [];
-    for (let prod of productos["products"]){
-      this.productos.push(prod);
+  insertAllProducts(categorias: any[]){
+    console.log(categorias)
+    for (let prod of categorias){
+      for (let p of prod.products){
+        this.allProducts.push(p);
+      }
     }
+  }
+  // verProductos(productos: any) {
+  //   this.productos= [];
+  //   for (let prod of productos["products"]){
+  //     this.productos.push(prod);
+  //   }
+  // }
+  bigImage(thumbnail: any) {
+    console.log(thumbnail);
+    this.imagenPadre = thumbnail;
+    this.isImageClick = true;
+  }
+
+  receiveMessage($event: boolean) {
+    this.isImageClick = $event;
   }
 }

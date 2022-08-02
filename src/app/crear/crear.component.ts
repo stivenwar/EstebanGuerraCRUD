@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crear.component.scss']
 })
 export class CrearComponent implements OnInit {
+  datosForm: any;
 
   constructor() { }
 
