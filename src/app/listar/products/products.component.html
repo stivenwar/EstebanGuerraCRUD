@@ -18,6 +18,7 @@
         <img  src="{{p.thumbnail}}"  (click)="bigImage(p.thumbnail)">
         <div class="content">
           <p>{{p.display_name}}</p>
+          <p>{{p.price_instructions.unit_price| currency:'EUR'}}</p>
         </div>
         <a href="{{p.share_url}}">Más información</a>
       </div>
