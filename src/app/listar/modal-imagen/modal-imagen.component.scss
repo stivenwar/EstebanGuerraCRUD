@@ -1,0 +1,31 @@
+.modal{
+
+  img{
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+  }
+}
+$medium: 1060px;
+$small: 800px;
+$smallx2: 550px;
+@media screen and (max-width: $medium){
+
+}
+@media screen and (max-width: $small){
+
+
+
+
+}
+@media screen and (max-width: $smallx2){
+  .modal{
+
+    img{
+      width: 300px;
+      height: 300px;
+      border-radius: 10px;
+    }
+  }
+
+}
