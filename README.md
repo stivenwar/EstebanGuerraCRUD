@@ -5,8 +5,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Corre `npm start`para abrir la web con la API `https://tienda.mercadona.es/api/v1_1/categories/92`.
-La aplicacion tiene un nav que donde puedes ir a cada seccion, es intuitiva y sencilla.
-Al hacer click en la imagen de los productos podemos verla a mas tamaño.
-gracias por vuestra atencion espero vuestra respuesta.
-Un cordia saludo 
+El motivo de usar `npm start` en lugar de `ng serve` es que el cors impedia que pudiera coger la información de
+la api por lo que hice unos ajustes añadiendo un archivo `proxy.conf.json`.
+La aplicación tiene un nav que donde puedes ir a cada sección, es intuitiva y sencilla.
+Al hacer clic en la imagen de los productos podemos verla a más tamaño.
+Gracias por vuestra atención espero vuestra respuesta.
+
+Un cordial saludo 
 Esteban Guerra
