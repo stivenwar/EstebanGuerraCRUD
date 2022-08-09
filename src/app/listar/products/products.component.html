@@ -20,7 +20,12 @@
           <p>{{p.display_name}}</p>
           <p>{{p.price_instructions.unit_price| currency:'EUR'}}</p>
         </div>
-        <a href="{{p.share_url}}">Más información</a>
+        <div class="enlace">
+          <a href="{{p.share_url}}">Más información</a>
+          <a [routerLink]="['/actualizar',p.id]">
+            <i class="fa-solid fa-edit"></i>
+          </a>
+        </div>
       </div>
 
     </div>

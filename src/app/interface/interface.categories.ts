@@ -8,10 +8,11 @@ export interface Categories{
   // published: boolean;
   products:[];
   display_name:string;
+  packaging: string;
   reference_format:string;
-  price_instruccions:[];
+  price_instructions:[{unit_price:string,size_format:string}];
   share_url:string;
-  thumnail:string;
+  thumbnail:string;
   unit_price:string;
 
 

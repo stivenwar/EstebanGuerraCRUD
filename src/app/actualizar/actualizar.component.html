@@ -2,33 +2,33 @@
 
   <div class="formulario">
     <h1>Actualizar Producto</h1>
-    <form (ngSubmit)="datosFormActualizar">
+    <form #formGroup="ngForm"  (ngSubmit)="ngOnsubmit(formGroup.form)">
       <p>
         <label for="titulo" class="colocar_nombre">Titulo
         </label>
-        <input type="text" name="introducir_titulo" id="titulo"  placeholder="Escribe el titulo del producto">
+        <input [(ngModel)]="introducir_titulo" type="text" name="introducir_titulo" id="titulo"  placeholder="Escribe el titulo del producto">
       </p>
       <p>
         <label for="precio" class="colocar_email">Precio
         </label>
-        <input type="number" name="introducir_precio" id="precio"  placeholder="Escribe el precio">
+        <input [(ngModel)]="introducir_precio"  type="number" name="introducir_precio" id="precio"  placeholder="Escribe el precio">
       </p>
       <p>
         <label for="peso" class="colocar_nombre">Peso
         </label>
-        <input type="text" name="introducir_titulo" id="peso"  placeholder="Escribe el peso">
+        <input  [(ngModel)]="introducir_peso"  type="text"  name="introducir_peso" id="peso"  placeholder="Escribe el peso">
       </p>
       <p>
         <label for="formato" class="colocar_nombre">Formato
         </label>
-        <input type="text" name="introducir_titulo" id="formato"  placeholder="Escribe el formato">
+        <input  [(ngModel)]="introducir_formato"  type="text" name="introducir_formato" id="formato"  placeholder="Escribe el formato">
       </p>
       <p>
         <label for="imagen" class="colocar_nombre">URL Imagen
         </label>
-        <input type="text" name="introducir_imagen" id="imagen"  placeholder="URL Imagen">
+        <input [(ngModel)]="introducir_url" type="text" name="introducir_imagen" id="imagen"  placeholder="URL Imagen">
       </p>
-      <button type="submit" name="enviar_formulario" id="enviar"><p>GUARDAR</p></button>
+      <button type="submit" name="enviar_formulario" id="enviar"><p>ACTUALIZAR</p></button>
 
 
 

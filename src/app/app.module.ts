@@ -13,6 +13,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { ProductsComponent } from './listar/products/products.component';
 import { UppercasePipe } from './pipes/uppercase.pipe';
 import { ModalImagenComponent } from './listar/modal-imagen/modal-imagen.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -27,12 +28,13 @@ import { ModalImagenComponent } from './listar/modal-imagen/modal-imagen.compone
     ModalImagenComponent
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
 
-  ],
+    ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
 })

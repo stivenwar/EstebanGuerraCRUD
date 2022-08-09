@@ -9,11 +9,17 @@ import {HttpClient} from "@angular/common/http";
 export class ServiceService {
 
   API_URI: string = '/api/v1_1/categories/92';
-
+  isActive:boolean = false;
   constructor( private http: HttpClient) {
   }
-  $modal = new EventEmitter
   getInfo(): Observable<Categories>{
     return this.http.get<Categories>(`${this.API_URI}`);
+  }
+  setIsActive(active:boolean){
+    this.isActive = active;
+    this.getIsActive();
+  }
+  getIsActive(){
+    return this.isActive;
   }
 }

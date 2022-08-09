@@ -4,7 +4,7 @@ import {ActivatedRoute, Params} from "@angular/router";
 @Component({
   selector: 'app-modal-imagen',
   templateUrl: './modal-imagen.component.html',
-  styleUrls: ['./modal-imagen.component.scss']
+  styleUrls: ['./modal-imagen.component.scss',]
 })
 export class ModalImagenComponent implements OnInit {
   childMessage!: boolean;

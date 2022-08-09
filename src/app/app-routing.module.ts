@@ -15,6 +15,7 @@ const routes: Routes = [
   {path: 'listar/:id',component: ProductsComponent},
   {path: 'crear', component: CrearComponent},
   {path: 'actualizar',component: ActualizarComponent},
+  {path: 'actualizar/:id',component: ActualizarComponent},
   {path: '**', component: HomeComponent}
 
 ];

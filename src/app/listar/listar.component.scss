@@ -1,3 +1,4 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
 *{
   font-family: "Arial";
 }
@@ -6,7 +7,10 @@
 
 
 }
-
+.enlace{
+  display: flex;
+  align-items: center;
+}
 .grid{
 
   display: grid;
@@ -84,6 +88,9 @@
     }
   }
 
+}
+.active-link{
+  background: #00B347
 }
 .title{
   display: flex;

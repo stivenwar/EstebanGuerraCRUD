@@ -16,6 +16,7 @@ export class ListarComponent implements OnInit {
   allProducts: any[];
   isImageClick: boolean;
   imagenPadre: string;
+  isActive: boolean = false;
 
   constructor(private service: ServiceService) {
     this.categorias = [];
@@ -51,6 +52,7 @@ export class ListarComponent implements OnInit {
   //     this.productos.push(prod);
   //   }
   // }
+
   bigImage(thumbnail: any) {
     console.log(thumbnail);
     this.imagenPadre = thumbnail;
@@ -59,5 +61,10 @@ export class ListarComponent implements OnInit {
 
   receiveMessage($event: boolean) {
     this.isImageClick = $event;
+  }
+
+  active() {
+    this.isActive = true;
+    this.service.setIsActive(this.isActive);
   }
 }
